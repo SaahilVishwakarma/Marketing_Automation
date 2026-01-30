@@ -153,6 +153,18 @@ CREATE TABLE user_activity_logs (
     activity_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+ALTER TABLE content_calendar
+ADD COLUMN post_time TIMESTAMP;
+ALTER TABLE content_library
+ADD COLUMN approval_date TIMESTAMP;
+ALTER TABLE weekly_posts
+ADD COLUMN scheduled_time TIMESTAMP;
+ALTER TABLE n8n_scheduler_logs
+ADD COLUMN scheduled_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+
+
+
 
 
 
